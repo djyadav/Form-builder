@@ -28,7 +28,7 @@ const validate = ({ fields, values }) => {
         }
       }
       case "CHECKBOX_GROUP": {
-        if (values[questionId].length < 1) {
+        if (mandatory && values && values[questionId].length < 1) {
           errors[questionId] = "Mandatory";
         }
         break;

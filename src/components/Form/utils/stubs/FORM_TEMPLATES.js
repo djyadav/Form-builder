@@ -120,7 +120,6 @@ const templates = [
           { value: "PART_TIME", label: "Part Time" },
           { value: "INTERNSHIP", label: "Internship" },
         ],
-        mandatory: true,
       },
       {
         type: "RADIO_GROUP",
