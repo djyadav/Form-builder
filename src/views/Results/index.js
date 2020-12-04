@@ -1,5 +1,5 @@
-import React from 'react';
-const Results=()=>{
-  return 'Results';
-}
+import React from "react";
+const Results = () => {
+  return "Results";
+};
 export default Results;
