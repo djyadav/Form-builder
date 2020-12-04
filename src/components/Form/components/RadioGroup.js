@@ -1,6 +1,6 @@
 import React from "react";
 import { Label, Input, FormGroup } from "reactstrap";
-function RadioGroup({ label, onChange, options, _key, error }) {
+function RadioGroup({ label, onChange, options, questionId, error }) {
   return (
     <FormGroup>
       <Label for="exampleEmail">{label}</Label>
@@ -12,9 +12,9 @@ function RadioGroup({ label, onChange, options, _key, error }) {
                 type="radio"
                 value={value}
                 onChange={(e) => {
-                  onChange({ value: e.target.value, _key });
+                  onChange({ value: e.target.value, questionId });
                 }}
-                name={_key}
+                name={questionId}
               />{" "}
               {label}
             </Label>

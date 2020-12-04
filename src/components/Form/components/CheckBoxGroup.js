@@ -1,6 +1,6 @@
 import React from "react";
 import { Label, Input, FormGroup } from "reactstrap";
-function CheckBoxGroup({ label, onChange, options, _key, values = [], error }) {
+function CheckBoxGroup({ label, onChange, options, questionId, values = [], error }) {
   const localOnChange = (e) => {
     const value = e.target.value;
     values = [...values];
@@ -9,7 +9,7 @@ function CheckBoxGroup({ label, onChange, options, _key, values = [], error }) {
     } else {
       values.push(value);
     }
-    onChange({ _key, value: values });
+    onChange({ questionId, value: values });
   };
   return (
     <FormGroup>
@@ -22,7 +22,7 @@ function CheckBoxGroup({ label, onChange, options, _key, values = [], error }) {
                 onChange={localOnChange}
                 value={value}
                 type="checkbox"
-                name={_key}
+                name={questionId}
               />{" "}
               {label}
             </Label>

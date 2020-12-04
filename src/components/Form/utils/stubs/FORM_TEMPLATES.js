@@ -5,7 +5,7 @@ const templates = [
     fields: [
       {
         type: "TEXTBOX",
-        _key: "name",
+        questionId: "name",
         contentType: "text",
         label: "Name",
         placeholder: "Name",
@@ -13,7 +13,7 @@ const templates = [
       },
       {
         type: "TEXTBOX",
-        _key: "age",
+        questionId: "age",
         contentType: "number",
         label: "Age",
         placeholder: "Age",
@@ -22,7 +22,7 @@ const templates = [
       },
       {
         type: "CHECKBOX_GROUP",
-        _key: "workTimings",
+        questionId: "workTimings",
         label: "What work timings they prefer?",
         options: [
           { value: "PERMANENT", label: "Permanent" },
@@ -33,7 +33,7 @@ const templates = [
       },
       {
         type: "RADIO_GROUP",
-        _key: "jobLevel",
+        questionId: "jobLevel",
         label: "What job level are they seeking?",
         options: [
           { value: "FULL_TIME", label: "Full time" },
@@ -49,7 +49,7 @@ const templates = [
     fields: [
       {
         type: "TEXTBOX",
-        _key: "age",
+        questionId: "age",
         contentType: "number",
         label: "Age",
         placeholder: "Age",
@@ -58,7 +58,7 @@ const templates = [
       },
       {
         type: "CHECKBOX_GROUP",
-        _key: "workTimings",
+        questionId: "workTimings",
         label: "What work timings they prefer?",
         options: [
           { value: "PERMANENT", label: "Permanent" },
@@ -69,7 +69,7 @@ const templates = [
       },
       {
         type: "RADIO_GROUP",
-        _key: "jobLevel",
+        questionId: "jobLevel",
         label: "What job level are they seeking?",
         options: [
           { value: "FULL_TIME", label: "Full time" },
@@ -86,7 +86,7 @@ const templates = [
     fields: [
       {
         type: "TEXTBOX",
-        _key: "name",
+        questionId: "name",
         contentType: "text",
         label: "Name",
         placeholder: "Name",
@@ -95,7 +95,7 @@ const templates = [
 
       {
         type: "CHECKBOX_GROUP",
-        _key: "workTimings",
+        questionId: "workTimings",
         label: "What work timings they prefer?",
         options: [
           { value: "PERMANENT", label: "Permanent" },
@@ -113,7 +113,7 @@ const templates = [
     fields: [
       {
         type: "CHECKBOX_GROUP",
-        _key: "workTimings",
+        questionId: "workTimings",
         label: "What work timings they prefer?",
         options: [
           { value: "PERMANENT", label: "Permanent" },
@@ -124,7 +124,7 @@ const templates = [
       },
       {
         type: "RADIO_GROUP",
-        _key: "jobLevel",
+        questionId: "jobLevel",
         label: "What job level are they seeking?",
         options: [
           { value: "FULL_TIME", label: "Full time" },

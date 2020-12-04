@@ -1,6 +1,6 @@
 import React from "react";
 import { Label, Input, FormGroup } from "reactstrap";
-function TextBox({ label, onChange, _key, placeholder, value, error }) {
+function TextBox({ label, onChange, questionId, placeholder, value, error }) {
   return (
     <FormGroup>
       <Label for="exampleEmail">{label}</Label>
@@ -8,7 +8,7 @@ function TextBox({ label, onChange, _key, placeholder, value, error }) {
         className={typeof error !== "undefined" ? "is-invalid" : ""}
         value={value}
         onChange={(e) => {
-          onChange({ value: e.target.value, _key });
+          onChange({ value: e.target.value, questionId });
         }}
         placeholder={placeholder}
       />

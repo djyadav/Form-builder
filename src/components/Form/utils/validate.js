@@ -1,35 +1,35 @@
 const validate = ({ fields, values }) => {
   let errors = {};
-  fields.forEach(({ _key, type, mandatory, contentType, ...field }) => {
+  fields.forEach(({ questionId, type, mandatory, contentType, ...field }) => {
     if (
-      (mandatory && typeof values[_key] === "undefined") ||
-      typeof values[_key] === "null"
+      (mandatory && typeof values[questionId] === "undefined") ||
+      typeof values[questionId] === "null"
     ) {
-      errors[_key] = "Mandatory";
+      errors[questionId] = "Mandatory";
       return;
     }
     switch (type) {
       case "TEXTBOX": {
-        if (mandatory && values[_key].length < 1) {
-          errors[_key] = "Mandatory";
+        if (mandatory && values[questionId].length < 1) {
+          errors[questionId] = "Mandatory";
           break;
         }
-        if (contentType === "number" && isNaN(values[_key])) {
-          errors[_key] = "Invalid Input.";
+        if (contentType === "number" && isNaN(values[questionId])) {
+          errors[questionId] = "Invalid Input.";
           break;
         }
         if (
           contentType === "number" &&
           typeof field.min !== "undefined" &&
-          Number(values[_key]) < field.min
+          Number(values[questionId]) < field.min
         ) {
-          errors[_key] = `Value should be >= ${field.min}`;
+          errors[questionId] = `Value should be >= ${field.min}`;
           break;
         }
       }
       case "CHECKBOX_GROUP": {
-        if (values[_key].length < 1) {
-          errors[_key] = "Mandatory";
+        if (values[questionId].length < 1) {
+          errors[questionId] = "Mandatory";
         }
         break;
       }
